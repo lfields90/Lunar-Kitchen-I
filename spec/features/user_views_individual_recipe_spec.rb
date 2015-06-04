@@ -13,18 +13,6 @@ feature "User views a recipe" do
     expect(page).to have_content instructions
   end
 
-  scenario "user views a recipe without a description" do
-    visit '/recipes/403'
-
-    expect(page).to have_content "This recipe doesn't have a description."
-  end
-
-  scenario "user views a recipe without any instructions" do
-    visit '/recipes/403'
-
-    expect(page).to have_content "This recipe doesn't have any instructions."
-  end
-
   scenario "user views a recipe's ingredients" do
     visit '/recipes/508'
 
